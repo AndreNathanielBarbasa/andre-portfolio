@@ -5,6 +5,7 @@ import {
   Cpu,
   Database,
   Download,
+  Dumbbell,
   ExternalLink,
   Github,
   Layers,
@@ -15,6 +16,7 @@ import {
   Palette,
   Phone,
   Server,
+  Siren,
   Sparkles,
   Sun,
   Terminal,
@@ -107,8 +109,8 @@ const projects = [
     description:
       'A multithreaded Java TCP server built with raw sockets, designed as the middleware layer for a community alert system. The server accepts multiple concurrent client connections, each handled on its own thread, and processes a custom lightweight text-based protocol for admin login and user registration. Includes a Swing-based admin console for starting/stopping the server and viewing real-time connection logs.',
     tech: ['Java', 'MySQL', 'Swing', 'Multithreading', 'Client-Server Architecture'],
-    icon: Layers,
-    gradient: 'from-blue-500 to-cyan-500',
+    icon: Siren,
+    gradient: 'from-red-500 via-orange-500 to-amber-400',
   },
 
    {
@@ -116,8 +118,8 @@ const projects = [
     description:
       'A fitness tracking web app with a FastAPI backend, storing user form submissions in a MySQL database (managed via phpMyAdmin). Uses Pydantic for data validation, containerized with Docker and Docker Compose.',
     tech: ['Python', 'FastAPI', 'Pydantic', 'MySQL', 'Docker','JavaScript', 'HTML/CSS'],
-    icon: Layers,
-    gradient: 'from-blue-500 to-cyan-500',
+    icon: Dumbbell,
+    gradient: 'from-yellow-500 via-teal-500 to-sky-500',
   },
 ];
 
@@ -324,11 +326,11 @@ function HeroSection({ scrollToSection }) {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
             <a
-              href="public/AndreNathaniel_Barbasa_CV.pdf"
+              href={`${import.meta.env.BASE_URL}public/AndreNathaniel_Barbasa_CV.pdf`}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
             >
               <Download size={18} />
-              Download Resume
+              Download CV
             </a>
             <button
               onClick={() => scrollToSection('projects')}
